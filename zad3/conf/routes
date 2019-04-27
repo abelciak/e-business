@@ -1,0 +1,70 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+#
+# own
+#
+
+# login
+GET     /login                      controllers.UserController.loginForm()
+POST    /login                      controllers.UserController.loginAction()
+GET     /logout                     controllers.UserController.logoutAction()
+
+# register
+GET     /register                   controllers.UserController.registerForm()
+GET     /register                   controllers.UserController.registerAction()
+
+# admin products
+GET     /admin/products/all         controllers.AdminController.ProductsAll()
+GET     /admin/products/add         controllers.AdminController.ProductsAddForm()
+POST    /admin/products/add         controllers.AdminController.ProductsAddAction()
+POST    /admin/products/:id/edit    controllers.AdminController.ProductsEditAction(id: Integer)
+POST    /admin/products/:id/delete  controllers.AdminController.ProductsDeleteAction(id: Integer)
+
+# admin orders
+GET     /admin/orders/all           controllers.AdminController.OrdersAll()
+GET     /admin/orders/:id           controllers.AdminController.OrdersShowID(id: Integer)
+POST    /admin/orders/:id/status    controllers.AdminController.OrdersStatusID(id: Integer)
+
+# admin categories
+GET     /admin/categories/all       controllers.AdminController.CategoriesAll()
+GET     /admin/categories/add       controllers.AdminController.CategoriesAddForm()
+POST    /admin/categories/add       controllers.AdminController.CategoriesAddAction()
+POST    /admin/categories/:id/edit  controllers.AdminController.CategoriesEditAction(id: Integer)
+POST    /admin/categories/:id/delete    controllers.AdminController.CategoriesDeleteAction(id: Integer)
+
+# admin users
+GET     /admin/users/all            controllers.AdminController.UsersAll()
+POST    /admin/users/:id/edit       controllers.AdminController.UsersEditAction(id: Integer)
+POST    /admin/users/:id/delete     controllers.AdminController.UsersDeleteAction(id: Integer)
+
+# products
+GET     /products/all               controllers.UserController.ProductsAll()
+GET     /products/:id               controllers.UserController.ProductsShowID(id: Integer)
+POST    /products/:id/buy           controllers.UserController.ProductsBuyIDAction(id: Integer)
+
+# categories
+GET     /categories/all             controllers.UserController.CategoriesAll()
+GET     /categories/:id             controllers.UserController.CategoriesShowID(id: Integer)
+
+# orders
+POST    /orders/send                controllers.UserController.OrdersSendAction()
+GET     /orders/all                 controllers.UserController.OrdersAll()
+GET     /orders/:id                 controllers.UserController.OrdersShowID(id: Integer)
+
+# site
+GET     /home                       controllers.UserController.ShowHomeSite()
+GET     /rules                      controllers.UserController.ShowRules()
+GET     /contact                    controllers.UserController.ShowContactSite()
