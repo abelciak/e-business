@@ -24,7 +24,7 @@ GET     /logout                     controllers.UserController.logoutAction()
 
 # register
 GET     /register                   controllers.UserController.registerForm()
-GET     /register                   controllers.UserController.registerAction()
+POST    /register                   controllers.UserController.registerAction()
 
 # admin products
 GET     /admin/products/all         controllers.AdminController.ProductsAll()
