@@ -1,0 +1,262 @@
+body {
+    background-image: url("/bg.png");
+    background-repeat: repeat;
+}
+
+#footer {
+  height: 40px;
+  background-color: #4B4171;
+  color: #F2F2F2;
+  padding: 5px;
+  margin-top: 40px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+}
+
+#container {
+  width: 1080px;
+  margin: -40px auto;
+  background-color: #ECEEFF;
+}
+
+#logo h1 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 19.8px;
+  padding: 10px;
+  color: #F2F2F2;
+}
+
+#logo {
+    height: 40px;
+    background-color:#4B4171;
+}
+
+#nav-bar {
+  height: 60px;
+  width: 1080px;
+  background-color: #4B4171;
+
+}
+
+#nav-bar ul {
+  margin: 0 20px;
+  padding: 0;
+  text-decoration: none;
+}
+
+#nav-bar li {
+  height: 60px;
+  display: block;
+  float: left;
+}
+#nav-bar li a{
+  display: block;
+  font-weight:bold;
+  text-decoration: none;
+  padding: 20px;
+  height: 20px;
+  color: #f2f2f2;
+}
+
+#nav-bar li a:hover {
+  background-color: #F2F2F2;
+  font-weight:bold;
+  color: #006699;
+}
+
+#nav-bar-admin {
+    height: 60px;
+    width: 1080px;
+    background-color: #6c5da2;
+
+}
+
+#nav-bar-admin ul {
+    margin: 0 20px;
+    padding: 0;
+    text-decoration: none;
+}
+
+#nav-bar-admin li {
+    height: 60px;
+    display: block;
+    float: left;
+}
+#nav-bar-admin li a{
+    display: block;
+    font-weight:bold;
+    text-decoration: none;
+    padding: 20px;
+    height: 20px;
+    color: #f2f2f2;
+}
+
+#nav-bar-admin li a:hover {
+    background-color: #F2F2F2;
+    font-weight:bold;
+    color: #006699;
+}
+
+#side {
+    width: 1040px;
+}
+
+#side-inner {
+    width:100%;
+    min-height: 400px; /* IF only height - problem */
+    margin: 20px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: arial;
+    float:left;
+}
+
+.price {
+    color: #221847;
+    font-size: 18px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #221847;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.card-img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#wrapper {
+    /*overflow: auto;
+    display: table;*/
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: center;
+}
+
+#details {
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+    width: 100%;
+}
+
+#details td, #details th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#details tr:nth-child(even){background-color: #f2f2f2;}
+
+#details tr:hover {background-color: #ddd;}
+
+#details th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #2b2541;
+    color: white;
+}
+
+.button-details {
+    background-color: #303141;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+.button-action {background-color: #201c31;}
+.button-red {background-color: #BA0020;}
+.button-green {background-color: #00482B ;}
+
+.add label{
+    display: block;
+}
+
+.add input{
+    height: 25px;
+    width: 260px;
+}
+
+.add textarea {
+    height: 200px;
+    width: 600px;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0,0,0, 0.5);
+}
+.popup_inner {
+    position: absolute;
+    left: 40%;
+    right: 40%;
+    top: 45%;
+    bottom: 45%;
+    margin: auto;
+    border-radius: 20px;
+    background: white;
+    font-size: 10px;
+    padding: 10px;
+}
+
+.no-decoration{
+    text-decoration: none !important;
+}
+
+.order-confirmed {color: #421780;}
+.order-sended {color: #008000;}
+.order-unconfirmed {color: #c5600e;}
+.order-canceled {color:  #BA0020;}
